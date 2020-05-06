@@ -1,0 +1,106 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/today/today-task",
+			"style": {
+				"navigationBarTitleText": "小当家"
+			}
+		},
+		{
+			"path": "pages/tabbar/tabbar-costlist/tabbar-costlist",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar/tabbar-mine/tabbar-mine",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar/tabbar-4/tabbar-4",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar/tabbar-add/tabbar-add",
+			"style": {}
+		},
+		
+		{
+			"path": "pages/tabbar/tabbar-home/tabbar-home",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar-add-detial/tabbar-add-cost/tabbar-add-cost",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar-add-detial/tabbar-add-target/tabbar-add-target",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar-add-detial/tabbar-add-video/tabbar-add-video",
+			"style": {}
+		}
+	    ,{
+            "path" : "pages/login/login",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "小当家",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"borderStyle": "black",
+		"backgroundColor": "#F1F1F1",
+		"color": "#8F8F94",
+		"selectedColor": "#f33e54",
+		"list": [{
+				"pagePath": "pages/today/today-task",
+				"iconPath": "static/img/tabbar/home.png",
+				"selectedIconPath": "static/img/tabbar/homeactive.png",
+				"text": "今日"
+			},
+			{
+				"pagePath": "pages/tabbar/tabbar-costlist/tabbar-costlist",
+				"iconPath": "static/img/tabbar/guanzhu.png",
+				"selectedIconPath": "static/img/tabbar/guanzhuactive.png",
+				"text": "所有"
+			},
+			//#ifdef MP-WEIXIN
+			{
+				"pagePath": "pages/tabbar/tabbar-4/tabbar-4",
+				"iconPath": "static/img/tabbar/add.png",
+				"selectedIconPath": "static/img/tabbar/addactive.png",
+				"text": "4"
+			},
+			//#endif
+			//#ifndef MP-WEIXIN
+		{
+				"pagePath": "pages/tabbar/tabbar-add/tabbar-add",
+				"iconPath": "static/img/tabbar/add.png",
+				"selectedIconPath": "static/img/tabbar/addactive.png",
+				"text": "发布"
+			}, 
+			//#endif
+	
+			{
+				"pagePath": "pages/tabbar/tabbar-mine/tabbar-mine",
+				"iconPath": "static/img/tabbar/me.png",
+				"selectedIconPath": "static/img/tabbar/meactive.png",
+				"text": "我"
+			}
+		]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "pages/login/login", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}
